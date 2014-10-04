@@ -1,0 +1,71 @@
+body {
+  background: black;
+  padding: 0;
+  margin: 0;
+}
+
+div#navbar {
+background: #7ADBEC;
+text-align: center;
+ width: 100%;
+}
+
+div#navbar .box {
+  background: #3598D1;
+
+  width: 100%;
+  max-width: 1020px;
+  margin: 0 auto;
+
+  width: 100%;
+  max-width: 1020px;
+}
+
+
+div#navbar a.home {
+  padding: 10px;
+  display: inline-block;
+  border-width: 1px;
+  border-style: solid;
+  border-color: Blue;
+  margin: 0;
+}
+div#navbar a {
+  padding: 10px;
+  display: inline-block;
+  border-width: 1px;
+  border-style: solid;
+  border-color: blue;
+  margin: 0;
+}
+div#navbar a.about {
+padding: 10px;
+display: inline-block;
+border-width: 1px;
+border-style: solid;
+border-color: blue;
+margin: 0;
+}
+
+
+div#hero {
+ background: black;
+}
+
+div#hero img{
+
+}
+
+
+div#footer {
+  background: #5CA7AC;
+  text-align: right;
+  padding: 20px;
+  display: inline-block;
+  border-width: 2px;
+  border-color: green;
+  margin: 0;
+}
+div#footer .phone {
+
+}
