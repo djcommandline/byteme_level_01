@@ -6,6 +6,21 @@ html {
   box-sizing: inherit;
 }
 
+.box:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.box { display: inline-block; }
+/* start commented backslash hack \*/
+* html .box { height: 1%; }
+.box { display: block; }
+/* close commented backslash hack */
+
+
 body {
   background: black;
   padding: 0;
@@ -14,8 +29,10 @@ body {
 }
 
 div#navbar {
-text-align: right;
- width: 100%;
+  position: relative;
+  z-index: 99999999;
+  text-align: right;
+  width: 100%;
 }
 
 div#navbar .box {
@@ -23,44 +40,83 @@ div#navbar .box {
   max-width: 1200px;
   height: 78px;
   margin: 20px auto 0;
-
 }
+
 div#logo img {
-float: left;
+  float: left;
   width: 100px;
   height: 75px;
 }
 
-div#navbar nav {
+div#navbar .navigation{
+  width: 500px;
   display: inline-block;
   margin-top: 10px;
   float: center;
 }
 
-div#navbar nav a {
+div#navbar nav .nav-item {
+  list-style: none;
+  float: left;
   text-decoration: none;
-  padding-left: 35px;
+  padding-left: 15px;
+  width: 25%;
+  text-align: center;
 }
 
+div#navbar nav .nav-item:hover a{
+  color: red;
+}
+div#navbar nav .nav-item:hover > .dropnav {
+  display: block;
+}
+
+div#navbar nav .dropnav{
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+div#navbar nav .nav-item:hover .dropnav a{
+  color: white;
+}
+div#navbar nav .dropnav > .nav-item{
+  float: none;
+  background-color: #999;
+  margin: 0;
+  padding: 4px;
+  width: 100%;
+  border-bottom: 1px solid #333;
+}
+
+div#navbar nav .dropnav > .nav-item:hover {
+  background: orange;
+}
 
 div#navbar a.home {
 
 }
+
 div#navbar a {
-background: black;
-color: white
+  text-decoration: none;
+  color: white;
 }
+
+div#navbar .dropnav > li > a{
+  color: #ddd;
+}
+
 div#navbar a.about {
 
 }
 
-
 div#hero {
-position: relative;
- background-image: url(/image/Cities.jpg);
- height: 450px;
- width: 100%;
- background-position: 40% 52%
+  position: relative;
+  background-image: url(/image/Cities.jpg);
+  background-position: fixed;
+  height: 450px;
+  width: 100%;
+  background-position: 40% 52%
 }
 
 div#hero .myButton {
@@ -110,8 +166,57 @@ margin-top: 47px;
 
 }
 
+
+
+section#values div.value {
+  font-family: Open Sans;
+  text-align: center;
+
+}
+
+
+section .box {
+  width:100%;
+  max-width: 1020px;
+  margin: 0 auto;
+  background: #05D7F7;
+  display: block;
+}
+
+section#values .box{
+  background-image: url(/image/background.jpg);
+}
+section#values .box > div {
+  text-align: center;
+  width: 33.333333333%;
+  float: left;
+  height: 600px;
+  color: #fff;
+  margin: 0;
+  border: 1px solid black;
+  padding: 0 20px 0 20px;
+}
+
+section#values .box > div > h3{
+  font-size: 16px;
+
+}
+#values .box .value img {
+  width: 50%;
+}
+
+#values .box .value img:hover {
+  width: 100%;
+}
+
+section#reason .box > div {
+
+}
+
 div#footer {
-  background: black;
+  background-image: url(/image/aircraft.jpg);
+  height: 150px;
+  background-position: 13% 70%;
   text-align: right;
   padding: 20px;
   display: block;
@@ -120,6 +225,14 @@ div#footer {
   border-color: black;
   margin: 0;
 }
-div#footer .phone {
+
+div#footer .box > h2,h3 {
+  margin: 0;
+  font-family: Montserrat;
+  font-size: 16px;
+}
+div#footer .box {
+  max-width: 86%;
+  text-align: right;
 
 }
